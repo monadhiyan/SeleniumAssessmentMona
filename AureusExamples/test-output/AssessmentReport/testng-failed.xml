@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [AssessmentReport]" guice-stage="DEVELOPMENT">
+  <parameter name="baseurl" value="https://the-internet.herokuapp.com/"/>
+  <listeners>
+    <listener class-name="components.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="FirstRun(failed)">
+    <classes>
+      <class name="assessmentmona.Verifybasics">
+        <methods>
+          <include name="verifyBasics"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- assessmentmona.Verifybasics -->
+      <class name="assessmentmona.Verifyclick">
+        <methods>
+          <include name="verifyClick"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- assessmentmona.Verifyclick -->
+    </classes>
+  </test> <!-- FirstRun(failed) -->
+  <test thread-count="5" name="SecondRun(failed)">
+    <classes>
+      <class name="assessmentmona.VerifyaddRemoveitems">
+        <methods>
+          <include name="verifyaddRemoveitems"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- assessmentmona.VerifyaddRemoveitems -->
+      <class name="assessmentmona.Verifybasicauth">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifybasicauthfail"/>
+          <include name="verifybasicauthsuccess"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- assessmentmona.Verifybasicauth -->
+      <class name="assessmentmona.VerifycheckBox">
+        <methods>
+          <include name="verifycheckboxcheck"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- assessmentmona.VerifycheckBox -->
+    </classes>
+  </test> <!-- SecondRun(failed) -->
+</suite> <!-- Failed suite [AssessmentReport] -->

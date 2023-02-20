@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AssessmentReport">
+<parameter name="baseurl" value=""></parameter>	
+	
+	
+<listeners>
+	<listener class-name="components.Listeners"/>
+	
+	
+</listeners>
+	
+  <test name="First5Run">
+	
+    <classes>
+		<class name="assessmentmona.Verifybasics"/>
+		<class name="assessmentmona.Verifyclick"/>
+		<class name="assessmentmona.VerifyaddRemoveitems"/>
+		<class name="assessmentmona.VerifycheckBox"/> 
+		<class name="assessmentmona.Verifykeypresses"/>
+		
+		
+    </classes>
+	</test>	
+		
+	
+	<test name="Second6Run">
+		<parameter name ="username" value ="tomsmith"/>
+        <parameter name ="password" value ="SuperSecretPassword!"/>
+		
+		<classes>
+			
+		<class name="assessmentmona.Dropdown"/> 
+		<class name="assessmentmona.Formauthentication"/>
+		<class name="assessmentmona.MouseHover"/>
+		<class name="assessmentmona.Multiplewindows"/> 
+		<class name="assessmentmona.NestedFrames"/>
+		<class name="assessmentmona.Verifybasicauth"/>
+		
+	
+		</classes>
+  </test> 
+</suite>
